@@ -3,7 +3,7 @@ const router = express.Router();
 const db = require("../../db/connection");
 
 // Get all parities
-router.get(`/parties`, (req, res) => {
+router.get("/parties", (req, res) => {
    const sql = "SELECT * FROM parties";
    db.query(sql, (err, rows) => {
       if (err) {
